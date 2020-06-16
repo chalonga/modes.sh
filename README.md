@@ -19,12 +19,12 @@ aka: cat file ~/.modes/dev
 TODO
 
 ## Usage 
-
-  On demand source script loader
-    Usage  :  mode [modename] [action] [action argument]
-    List   :  mode
-    Load   :  mode <modename>
-    Show   :  mode <modename> show
-    Edit   :  mode <modename> edit
-    Import :  mode <modename> import <othermode>
-    Help   :  mode help
+Help:
+   On demand source script loader
+     Usage  :  mode [modename] [action] [action argument]
+     List   :  mode
+     Load   :  mode <modename>
+     Show   :  mode <modename> show
+     Edit   :  mode <modename> edit
+     Import :  mode <modename> import <othermode>
+     Help   :  mode help
