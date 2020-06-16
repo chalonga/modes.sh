@@ -4,22 +4,22 @@
 Useful for managing aliases.  Currently loading another mode once a mode is loaded only resets aliases.
 
 ### Create or Edit mode "dev"
-aka: editor ~/.modes/dev
 ```
 mode dev edit
 ```
+Executes: editor ~/.modes/dev
 
 ### Load "dev" mode
-aka: source ~/.modes/dev
 ```
 mode dev
 ```
+Executes: source ~/.modes/dev
 
 ### Show "dev" mode 
-aka: cat file ~/.modes/dev
 ```
 mode dev show
 ```
+Executes: cat file ~/.modes/dev
 
 ### Import "dev" mode 
 TODO
