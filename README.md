@@ -9,6 +9,7 @@ Useful for managing aliases and/or environments.  Currently loading another mode
 cp .bash_profile .bash_profile.bak
 conda init
 mv .bash_profile ~/.modes/conda
+mv .bash_profile.bak .bash_profile
 mode conda
 ```
 
