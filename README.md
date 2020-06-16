@@ -1,7 +1,16 @@
 # modes.sh
 ## Manage bash/zsh resource files as separate modes of operation.
 
-Useful for managing aliases.  Currently loading another mode once a mode is loaded only resets aliases.
+Useful for managing aliases and/or environments.  Currently loading another mode once a mode is loaded only resets aliases.
+
+## Create anaconda mode
+```
+. modes.sh # or add to .bashrc or .bash_profile
+cp .bash_profile .bash_profile.bak
+conda init
+mv .bash_profile ~/.modes/conda
+mode conda
+```
 
 ### Create or Edit mode "dev"
 ```
