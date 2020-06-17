@@ -2,7 +2,7 @@
 ## Manage bash/zsh resource files as separate modes of operation.
 
 Useful for managing aliases and/or environments.  Currently loading another mode once a mode is loaded only resets aliases. This can be used for managing aliases, PATH, misc global vars or whatever into seperate modes or projects.
-Super simple, it's just short cut commands for source, cat, vi, the script file.
+Super simple, it's just short cut commands for source, cat, vi, the script file. Mostly wrote this to see if I can encourge myself to use shell scripting more and keep what is loaded currently clean (environment vars and aliases) while also encouraging me to use env vars and aliases more.
 
 ## Install
 Download modes.sh and "source" from whatever .profile or just use as .profile, .bash_profile etc..
