@@ -46,8 +46,8 @@ function edit_mode {
 
 function list_mode {
   echo "Available Modes:"
-  for dir in `ls ${MODEDIR}` ; do
-    echo "  ${dir}"
+  for m in `ls ${MODEDIR}` ; do
+    echo "  ${m}"
   done
 }
 
@@ -62,12 +62,10 @@ function mode {
   ACTION_ARG=$3
   if [ -z "$MODE" ]; then
     list_mode
+  elif [ "$MODE" = "help" ]; then
+    usage
   elif [ -z "$ACTION" ]; then
-    if [ "$MODE" = "help" ]; then
-      usage
-    else
-      load_mode $MODE
-    fi
+    load_mode $MODE
   elif [ "$ACTION" = "edit" ]; then
     edit_mode $MODE
     if [ -z "$NO_AUTO_LOAD" ]; then
