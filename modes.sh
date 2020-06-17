@@ -2,6 +2,7 @@
 
 MODEDIR="${HOME}/.modes"
 GLOBAL_ALIAS="${HOME}/.aliases"
+CURRENT_MODE=""
 
 # leave empty to load mode after edit, any value to disable autoload
 NO_AUTO_LOAD=""
@@ -34,6 +35,7 @@ function load_mode {
     fi
     . "${MODEDIR}/$MODE"
     echo "Loaded ${MODE}"
+    CURRENT_MODE="${MODE}"
   else
     echo "${MODE} does not exist"
   fi
@@ -47,13 +49,21 @@ function edit_mode {
 function list_mode {
   echo "Available Modes:"
   for m in `ls ${MODEDIR}` ; do
-    echo "  ${m}"
+    if [ "${m}" = "${CURRENT_MODE}" ] ; then
+      echo " * ${m} (current)"
+    else
+      echo "   ${m}"
+    fi
   done
 }
 
 function show_mode {
   MODE=$1
-  cat "${MODEDIR}/$MODE"
+  if [ -f "${MODEDIR}/$MODE" ]; then
+    cat "${MODEDIR}/$MODE"
+  else
+    echo "${MODE} does not exist"
+  fi
 }
 
 function mode {
