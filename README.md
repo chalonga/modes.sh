@@ -1,7 +1,11 @@
 # modes.sh
 ## Manage bash/zsh resource files as separate modes of operation.
 
-Useful for managing aliases and/or environments.  Currently loading another mode once a mode is loaded only resets aliases.
+Useful for managing aliases and/or environments.  Currently loading another mode once a mode is loaded only resets aliases. This can be used for managing aliases, PATH, misc global vars or whatever into seperate modes or projects.
+Super simple, it's just short cut commands for source, cat, vi, the script file.
+
+## Install
+Download modes.sh and "source" from whatever .profile or just use as .profile, .bash_profile etc..
 
 ## Create anaconda mode
 ```
