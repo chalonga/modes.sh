@@ -6,6 +6,11 @@ Super simple, it's just short cut commands for source, cat, vi, the script file.
 
 ## Install
 Download modes.sh and "source" from whatever .profile or just use as .profile, .bash_profile etc..
+```
+git clone https://github.com/chalonga/modes.sh modes
+mv modes/modes.sh .modes.sh
+echo '. ${HOME}/.modes.sh' >> ${HOME}/.bash_profile
+```
 
 ## Create anaconda mode
 ```
