@@ -26,7 +26,7 @@ function usage {
   echo "  Help   :  mode help"
 }
 
-function load_mode {
+function load-mode {
   MODE=$1
   if [ -f "${MODEDIR}/$MODE" ]; then
     unalias -a
@@ -41,12 +41,12 @@ function load_mode {
   fi
 }
 
-function edit_mode {
+function edit-mode {
   MODE=$1
   $EDITOR "${MODEDIR}/$MODE"
 }
 
-function list_mode {
+function list-mode {
   echo "Available Modes:"
   for m in `ls ${MODEDIR}` ; do
     if [ "${m}" = "${CURRENT_MODE}" ] ; then
@@ -57,7 +57,7 @@ function list_mode {
   done
 }
 
-function show_mode {
+function show-mode {
   MODE=$1
   if [ -f "${MODEDIR}/$MODE" ]; then
     cat "${MODEDIR}/$MODE"
@@ -71,18 +71,18 @@ function mode {
   ACTION=$2
   ACTION_ARG=$3
   if [ -z "$MODE" ]; then
-    list_mode
+    list-mode
   elif [ "$MODE" = "help" ]; then
     usage
   elif [ -z "$ACTION" ]; then
-    load_mode $MODE
+    load-mode $MODE
   elif [ "$ACTION" = "edit" ]; then
-    edit_mode $MODE
+    edit-mode $MODE
     if [ -z "$NO_AUTO_LOAD" ]; then
-      load_mode $MODE
+      load-mode $MODE
     fi
   elif [ "$ACTION" = "show" ]; then
-    show_mode $MODE
+    show-mode $MODE
   else
     usage
   fi
